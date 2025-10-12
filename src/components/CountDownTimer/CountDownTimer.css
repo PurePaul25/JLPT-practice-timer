@@ -108,3 +108,21 @@
     margin-bottom: 30px;
     font-weight: bold;
 }
+
+@media (max-width: 400px) {
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .input-container input {
+        padding: 14px 10px;
+    }
+
+    .display-time {
+        font-size: 4.2rem;
+    }
+
+    .btn {
+        padding: 15px 30px;
+    }
+}
