@@ -54,7 +54,7 @@ export const TimerDisplay: React.FC = () => {
       </div>
 
       {/* Main Clock */}
-      <div className={`relative flex items-end justify-center gap-1 font-mono transition-all duration-300 ${clockColor} ${glowClass} ${isUrgent ? 'animate-pulse' : ''}`}>
+      <div className={`relative flex items-end justify-center gap-0.5 font-mono transition-all duration-300 ${clockColor} ${glowClass} ${isUrgent ? 'animate-pulse' : ''}`}>
         {/* Hours */}
         <AnimatePresence mode="popLayout">
           <motion.span

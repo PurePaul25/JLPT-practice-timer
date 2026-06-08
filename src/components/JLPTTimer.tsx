@@ -53,7 +53,9 @@ export const JLPTTimer: React.FC = () => {
 
           {/* Action buttons */}
           <div className="flex items-center gap-1.5">
-            <SoundController />
+            <div className="hidden sm:block">
+              <SoundController />
+            </div>
 
             {/* Screen Awake */}
             <button
@@ -96,8 +98,13 @@ export const JLPTTimer: React.FC = () => {
       </header>
 
       {/* MAIN CONTENT */}
-      <main className="flex flex-1 flex-col items-center justify-start px-4 py-8">
+      <main className="flex flex-1 flex-col items-center justify-start px-4 py-6">
         <div className="w-full max-w-3xl space-y-4">
+
+          {/* Mobile Sound Controller */}
+          <div className="sm:hidden flex justify-center w-full pb-1">
+            <SoundController />
+          </div>
 
           {/* Level Selector Card */}
           <div className="rounded-3xl border border-slate-200/80 bg-white p-4 shadow-sm dark:border-slate-800/60 dark:bg-slate-900/70">
