@@ -38,7 +38,7 @@ export const TimerDisplay: React.FC = () => {
     : '';
 
   return (
-    <div className="flex flex-col items-center gap-5 py-6">
+    <div className="flex flex-col items-center gap-5 py-5">
       {/* Level + Section badge */}
       <div className="flex items-center gap-3">
         <span className={`rounded-full bg-gradient-to-r ${selectedLevel.badgeColor} px-4 py-1 text-xs font-black tracking-widest text-white shadow-sm`}>
@@ -97,31 +97,31 @@ export const TimerDisplay: React.FC = () => {
         <AnimatePresence mode="wait">
           {status === 'idle' && (
             <motion.p key="idle" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-              className="text-xs font-semibold uppercase tracking-widest text-slate-400 dark:text-slate-500">
+              className="text-sm font-semibold uppercase tracking-widest text-slate-400 dark:text-slate-500">
               Sẵn sàng bắt đầu
             </motion.p>
           )}
           {status === 'paused' && (
             <motion.p key="paused" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-              className="flex items-center justify-center gap-1.5 text-xs font-bold uppercase tracking-widest text-amber-500 dark:text-amber-400 animate-pulse">
+              className="flex items-center justify-center gap-1.5 text-sm font-bold uppercase tracking-widest text-amber-500 dark:text-amber-400 animate-pulse">
               <PauseCircle className="h-3.5 w-3.5" /> Đang tạm dừng
             </motion.p>
           )}
           {isUrgent && (
             <motion.p key="urgent" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-              className="text-xs font-bold uppercase tracking-widest text-rose-500 dark:text-rose-400">
+              className="text-sm font-bold uppercase tracking-widest text-rose-500 dark:text-rose-400">
               ⚡ Sắp hết giờ! Dưới 30 giây!
             </motion.p>
           )}
           {isWarning && (
             <motion.p key="warning" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-              className="text-xs font-semibold text-rose-400 dark:text-rose-400">
+              className="text-sm font-semibold text-rose-400 dark:text-rose-400">
               ⚠️ Còn dưới 1 phút
             </motion.p>
           )}
           {isCaution && (
             <motion.p key="caution" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-              className="text-xs font-semibold text-amber-500 dark:text-amber-400">
+              className="text-sm font-semibold text-amber-500 dark:text-amber-400">
               ⏳ Còn dưới 5 phút — hãy tập trung!
             </motion.p>
           )}
